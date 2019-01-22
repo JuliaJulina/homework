@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+a {
+    cursor: pointer;
+}
+
+/* v a r i a b l e s */
+
+// colors
+
+$gray: #63656c;
+$light-gray: #d6d6da;
+$white: #fff;
+$orange: #f5a623;
+$black: #000;
+
+$footer-bg: #19191a;

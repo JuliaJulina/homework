@@ -22,7 +22,8 @@
         width: 25%;
     }
 
-    &_logo {
+    &_logo a {
+        display: inline-block;
         margin-right: 80px;
         height: 24px;
         width: 88px;
@@ -30,6 +31,22 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        &:hover {
+            height: 24px;
+            width: 88px;
+            background: url('./../../assets/img/logo_hover.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &:active {
+            height: 24px;
+            width: 88px;
+            background: url('./../../assets/img/logo_active.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
     }
 
     &_copyright, &_company-name {

@@ -19,7 +19,7 @@
     &_left {
         display: flex;
         flex-direction: row;
-        width: 25%;
+        width: 50%;
     }
 
     &_copyright, &_company-name {
@@ -114,6 +114,34 @@
             background: url('./../../assets/img/footer/you-tube-icon_active.svg');
             transition: all 0.5s;
             opacity: 0.8;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: $xs) {
+    .footer {
+        &_wrapper {
+            flex-direction: column;
+        }
+        &_left {
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        &_soc-icons {
+            justify-content: space-around;
+            width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width: $xxs) {
+    .footer {
+        &_soc-icons {
+            justify-content: space-between;
         }
     }
 }

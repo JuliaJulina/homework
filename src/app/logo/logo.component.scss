@@ -3,6 +3,7 @@
 
 .logo a {
     display: inline-block;
+    position: relative;
     margin-right: 80px;
     height: 24px;
     width: 88px;
@@ -10,6 +11,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    z-index: 100;
     &:hover {
         height: 24px;
         width: 88px;
@@ -34,3 +36,21 @@
     }
 }
 
+
+@media screen and (max-width: $sm) {
+    .logo a {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: $xs) {
+    .logo a {
+        margin-right: 55px;
+    }
+}
+
+@media screen and (max-width: $xxs) {
+    .logo a {
+        margin-right: 35px;
+    }
+}

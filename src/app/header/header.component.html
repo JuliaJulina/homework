@@ -2,13 +2,15 @@
   <div class="header-container">
     <div class="header_wrapper">
 
-      <div class="header_menu-burger">
+      <div class="header_menu-burger" (click) = "active = !active" [class.menu-link_opened] = "active">
         <span></span>
       </div>
+
+
       <app-logo>
         
       </app-logo>
-      <nav class="header_menu">
+      <nav class="header_menu" [class.menu_opened] = "active">
         <ul class="header_menu--items">
           <li class="header_menu--item" *ngFor="let menu_item of menu_items">
             <a href="#">
@@ -47,4 +49,6 @@
     </div>
   </div>
 </header>
+
+<div class="overlay" (click) = "active = !active" [class.overlay_visible] = "active"></div>
 

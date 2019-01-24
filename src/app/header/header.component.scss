@@ -179,13 +179,18 @@
         margin-right: 30px;
         width: 24px;
         height: 24px;
+        &:hover {
+            cursor: pointer;
+        }
         span {
             top: -3px;
             &:before {
                 top: -10px;
+                transition: all 0.7s;
             }
             &:after {
                 bottom: -10px;
+                transition: all 0.7s;
             }
         }
         span, span:before, span:after {
@@ -197,6 +202,47 @@
 
 
 
+.menu-link_opened {
+    span {
+        height: 0;
+        &:before {
+            top: -3px;
+            transform: rotate(-45deg);
+            transition: all 0.7s;
+        }
+
+        &:after {
+            top: -3px;
+            transform: rotate(45deg);
+            transition: all 0.7s;
+        }
+    }
+}
+
+
+.overlay {
+    display: none;
+    // opacity: 0;
+    // visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.7s;
+}
+
+
+.overlay_visible {
+    // opacity: 1;
+    display: block;
+    visibility: visible;
+    transition: all 0.7s;
+    z-index: 10;
+}
+
+
+
+
 
 
 @media screen and (max-width: $xl) {
@@ -205,10 +251,10 @@
     }
 }
 
-@media screen and (max-width: $md) {
+@media screen and (max-width: $lg) {
     .header {
         &_menu--item {
-            margin-right: 30px;
+            margin-right: 25px;
         }
         &_search--field {
             width: 200px;
@@ -220,10 +266,73 @@
             margin-right: 20px;
         }
         &_profile {
+            margin-right: 20px;
+        }
+
+    }
+}
+
+@media screen and (max-width: $md) {
+    .header {
+        &_menu-burger {
+            display: block;
+            position: relative;
+            z-index: 100;
+        }
+
+        &_menu {
+            position: fixed;
+            top: 0;
+            left: -300px;
+            width: 200px;
+            transition: all 0.7s;
+
+
+            ul {
+                flex-direction: column;
+                padding-top: 48px;
+                background-color: #fff;
+                li {
+                    position: relative;
+                    margin-right: 0;
+                    padding: 20px 0;
+                    text-align: center;
+                    &:not(:first-child) {
+                        
+                        &:after {
+                            position: absolute;
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: #63656c;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &_search--field {
+            width: 350px;
+        }
+
+        &_profile {
             margin-right: 0;
         }
+
         &_menu-burger--profile {
             display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .header {
+        &_search--field {
+            width: 240px;
         }
     }
 }
@@ -231,13 +340,44 @@
 @media screen and (max-width: $sm) {
     .header {
         &_menu-burger {
-            display: block;
-        }
-        &_menu {
-            display: none;
+            margin-right: 20px;
         }
         &_search--field {
-            width: 150px;
+            width: 100px;
+        }
+        &_separator {
+            margin: 0 10px;
+        }
+        &_g {
+            margin-right: 10px;
         }
     }
+}
+
+@media screen and (max-width: $xs) {
+    .header {
+        &_search {
+            display: none;
+        }
+        &_separator {
+            display: none;
+        }
+    }
+}
+
+
+@media screen and (max-width: $xxs) {
+    .header {
+        &_g {
+            display: none;
+        }
+    }
+}
+
+
+
+
+.menu_opened {
+    left: 0;
+    transition: all 0.7s;
 }

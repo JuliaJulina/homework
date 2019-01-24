@@ -7,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   menu_items = menu_items;
-  constructor() { }
+  
+  constructor() {}
 
-  ngOnInit() {
-  }
+
+  
+
+  ngOnInit() {}
 
 }
 

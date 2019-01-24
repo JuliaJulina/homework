@@ -7,7 +7,8 @@
 
 .container {
     margin: 0 auto;
-    width: 1200px;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .section_title {
@@ -17,6 +18,33 @@
     line-height: normal;
     letter-spacing: 0.3px;
     color: #2a2b2f;
+}
+
+.button_more {
+    display: block;
+    margin: 0 auto 0;
+    width: 146px;
+    height: 32px;
+    border: 1px solid #258fe5;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    color: #258fe5;
+    text-transform: uppercase;
+    background-color: transparent;
+    transition: all 0.5s;
+    &:hover {
+        color: #4ca6ef;
+        border: 1px solid #4ca6ef;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    &:active {
+        color: #266bc5;
+        border: 1px solid #266bc5;
+    }
 }
 
 a {
@@ -34,3 +62,30 @@ $orange: #f5a623;
 $black: #000;
 
 $footer-bg: #19191a;
+
+// breakpoints
+
+// $xxs: (max-width: 320px);
+// $xs: '(min-width: 321px) and (max-width: 575px)';
+// $sm: '(min-width: 576px) and (max-width: 767px)';
+// $md: '(min-width: 768px) and (max-width: 1024px)';
+// $lg: '(min-width: 1025px) and (max-width: 1199px)';
+
+
+// $xl: (min-width: 1200);
+
+// $xsplus: (min-width: 321px);
+// $smplus: (min-width: 576px);
+// $mdplus: (min-width: 768px);
+// $lgplus: (min-width: 1025px);
+// $xlplus: (min-width: 1240px);
+// $lggplus: (max-width: 1440px);
+
+$xl: 1300px;
+$lg: 1199px;
+$md: 1024px;
+$sm: 767px;
+$xs: 575px;
+$xxs: 425px;
+
+// $lggminus: (max-width: 1439px);

@@ -1,0 +1,35 @@
+@import './../../styles.scss';
+
+
+.logo a {
+    display: inline-block;
+    margin-right: 80px;
+    height: 24px;
+    width: 88px;
+    background: url('./../../assets/img/logo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:hover {
+        height: 24px;
+        width: 88px;
+        background: url('./../../assets/img/logo_hover.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    &:active {
+        height: 24px;
+        width: 88px;
+        background: url('./../../assets/img/logo_active.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media screen and (max-width: $xl) {
+    .logo a {
+        margin-right: 60px;
+    }
+}

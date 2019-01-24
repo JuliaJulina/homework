@@ -1,0 +1,38 @@
+
+<section class="subscribers">
+    <div class="container">
+      <div class="subscribers_wrapper">
+        <h2 class="subscribers_title section_title">
+          Subscribers
+        </h2>
+        <ul class="subscribers_items">
+          <li class="subscribers_item" *ngFor="let subscriber of subscribers">
+            <a href="#">
+              <div class="subscribers_photo">
+                <img src="{{ subscriber.user_photo }}" alt="user">
+              </div>
+              <div class="subscribers_descr">
+                <div class="subscribers_name">
+                  {{ subscriber.user_name }}
+                </div>
+                <div class="subscribers_level">
+                  <!-- <span class="subscribers_level-icon"> -->
+                    <img  class="subscribers_level-icon" src="./../../assets/img/subscribers/level-icon.svg" alt="level-icon">
+                  <!-- </span> -->
+                  <span class="subscribers_level-number">
+                    {{ subscriber.user_level }}
+                  </span>
+                  <span class="subscribers_level-text">
+                    LVL
+                  </span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button class="button_more">
+            all subscribers
+          </button>
+      </div>
+    </div>
+  </section>

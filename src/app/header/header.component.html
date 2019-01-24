@@ -1,28 +1,24 @@
 <header class="header">
   <div class="header-container">
     <div class="header_wrapper">
-      <div class="header_logo">
-        <a href="#"></a>
+
+      <div class="header_menu-burger">
+        <span></span>
       </div>
+      <app-logo>
+        
+      </app-logo>
       <nav class="header_menu">
         <ul class="header_menu--items">
-          <li class="header_menu--item">
-            main page
-          </li>
-          <li class="header_menu--item">
-            favorite
-          </li>        
-          <li class="header_menu--item">
-            games
-          </li>        
-          <li class="header_menu--item">
-            records
+          <li class="header_menu--item" *ngFor="let menu_item of menu_items">
+            <a href="#">
+              {{ menu_item.item }}
+            </a>
           </li>
         </ul>
       </nav>
       <div class="header_search">
-        <div class="header_search--field">
-        </div>
+        <input type="text" class="header_search--field">
         <div class="header_search--icon">
         </div>
       </div>
@@ -45,7 +41,7 @@
         </div>
       </div>
 
-      <div class="header_menu-burger">
+      <div class="header_menu-burger--profile">
         <span></span>
       </div>
     </div>

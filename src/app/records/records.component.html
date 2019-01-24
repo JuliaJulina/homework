@@ -1,0 +1,63 @@
+<section class="records">
+    <div class="container">
+      <div class="records_wrapper">
+        <h2 class="records_title section_title">
+          Records
+        </h2>
+        <ul class="records_items">
+          <li class="records_item" *ngFor="let record of records">
+            <div class="records_image">
+              <img src= "{{ record.image }}" alt="video">
+              <span class="records_date">
+                {{ record.date }}
+              </span>
+            </div>
+            <div class="records_line-1">
+              <span class="records_channel-icon">
+                  <img src= "{{ record.channel_icon }}" alt="channel">
+              </span>
+              <span class="records_video-name">
+                {{ record.video_name }}
+              </span>
+            </div>
+  
+            <div class="records_line-2">
+              <a class="records_channel-name">
+                {{ record.channel_name }}
+              </a>
+              <span class="records_watchers">
+                <img src="./../../assets/img/records/watchers-icon.svg" alt="watchers" class="records_watchers-icon">
+                <span class="records_watchers-text">
+                  {{ record.watchers }}
+                </span>
+              </span>
+              <span class="records_time">
+                  <img src="./../../assets/img/records/time-icon.svg" alt="time" class="records_time-icon">
+                  <span class="records_time-text">
+                    {{ record.time }}
+                  </span>
+                </span>
+            </div>
+            <div class="records_categories">
+              <ul>
+                <li>
+                  <a href="#">
+                    {{ record.categories.category1 }}
+                  </a>
+                </li>
+                <li *ngIf="record.categories.category2">
+                  <a href="#">
+                    {{ record.categories.category2 }}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+  
+        <button class="button_more">
+          more records
+        </button>
+      </div>
+    </div>
+  </section>

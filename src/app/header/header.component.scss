@@ -282,7 +282,7 @@
 
         &_menu {
             position: fixed;
-            top: 0;
+            top: 48px;
             left: -300px;
             width: 200px;
             transition: all 0.7s;
@@ -290,24 +290,20 @@
 
             ul {
                 flex-direction: column;
-                padding-top: 48px;
                 background-color: #fff;
                 li {
                     position: relative;
                     margin-right: 0;
                     padding: 20px 0;
                     text-align: center;
-                    &:not(:first-child) {
-                        
-                        &:after {
-                            position: absolute;
-                            content: '';
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 1px;
-                            background-color: #63656c;
-                        }
+                    &:after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #63656c;
                     }
                 }
             }
